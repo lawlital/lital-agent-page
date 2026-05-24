@@ -46,8 +46,10 @@
   /* ===== ניווט ===== */
   header.nav{background:rgba(255,251,247,.9);backdrop-filter:blur(10px);position:sticky;top:0;z-index:50;border-bottom:1px solid rgba(44,36,51,.07)}
   .nav-inner{max-width:var(--maxw);margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-  .brand .logo-chip{display:flex}
-  .brand img{height:40px;width:auto;display:block}
+  .brand-logo{display:flex;flex-direction:column;line-height:1.15;text-decoration:none}
+  .brand-name{font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:1.08rem;color:var(--plum);letter-spacing:-.01em;background:linear-gradient(90deg,var(--rose-deep) 0%,var(--coral) 60%,var(--teal) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .brand-sub{font-family:'Heebo',sans-serif;font-size:.72rem;font-weight:500;color:var(--muted);margin-top:3px;letter-spacing:.01em}
+  @media(max-width:520px){.brand-name{font-size:.95rem}.brand-sub{font-size:.66rem}}
   .nav-links{display:flex;gap:26px}
   .nav-links a{color:var(--plum);text-decoration:none;font-size:.96rem;font-weight:500;opacity:.78;transition:.2s}
   .nav-links a:hover{opacity:1;color:var(--rose)}
@@ -154,7 +156,9 @@
 
   /* ===== פוטר ===== */
   footer{background:#fff;border-top:1px solid rgba(44,36,51,.08);text-align:center;padding:32px 24px;color:var(--muted)}
-  footer .logo-chip img{height:46px;margin-bottom:12px}
+  footer .brand-logo{display:inline-flex;align-items:center;margin-bottom:14px}
+  footer .brand-name{font-size:1.45rem}
+  footer .brand-sub{font-size:.88rem;margin-top:5px}
   footer p{font-size:.88rem}
 
   /* ===== גילוי בגלילה ===== */
@@ -169,7 +173,12 @@
 
 <header class="nav">
   <div class="nav-inner">
-    <div class="brand"><span class="logo-chip"><img src="assets/logo.jpg" alt="לוגו ליטל יעקובוביץ דראי, משרד עורכי דין"></span></div>
+    <div class="brand">
+      <a href="#" class="brand-logo" aria-label="ליטל יעקובוביץ דראי — משרד עורכי דין לדיני משפחה, ירושה ואפוטרופסות">
+        <span class="brand-name">ליטל יעקובוביץ דראי</span>
+        <span class="brand-sub">עו״ד · דיני משפחה · ירושה · אפוטרופסות</span>
+      </a>
+    </div>
     <nav class="nav-links">
       <a href="#about">מי אני</a>
       <a href="#meet">הסוכנת</a>
@@ -281,7 +290,10 @@
 <!-- ====== סוף בלוק CTA המודולרי ====== -->
 
 <footer>
-  <div class="logo-chip"><img src="assets/logo.jpg" alt="לוגו המשרד"></div>
+  <div class="brand-logo">
+    <span class="brand-name">ליטל יעקובוביץ דראי</span>
+    <span class="brand-sub">משרד עו״ד · דיני משפחה · ירושה · אפוטרופסות</span>
+  </div>
   <p>© ליטל יעקובוביץ דראי · משרד עורכי דין · דיני משפחה, ירושה, אפוטרופוסות</p>
 </footer>
 
